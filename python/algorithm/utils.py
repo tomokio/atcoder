@@ -23,3 +23,17 @@ def eratosthenes(x: int) -> list:
                 nums[i * j] = 0
 
     return sorted(list(set(nums)))[2:] # setで複数個ある0を1つに [2:]で0と1を除く素数を抽出
+
+# 二分探索：ソートされた配列Aから値がx以上の要素のうち最小の要素のインデックスを求める
+def binary_search(A: list, N:int, x:int) -> int:
+    l = 0
+    r = N - 1
+
+    while r - l > 1:
+        c = (l + r) // 2
+        if A[c] < x:
+            l = c
+        else:
+            r = c
+
+    return r
