@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-import io
-import sys
+import io, sys
+from icecream import ic
 
 _INPUT = """\
 3
